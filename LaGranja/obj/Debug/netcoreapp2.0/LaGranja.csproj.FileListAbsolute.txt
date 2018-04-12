@@ -1,0 +1,11 @@
+D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\bin\Debug\netcoreapp2.0\LaGranja.deps.json
+D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\bin\Debug\netcoreapp2.0\LaGranja.runtimeconfig.json
+D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\bin\Debug\netcoreapp2.0\LaGranja.runtimeconfig.dev.json
+D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\bin\Debug\netcoreapp2.0\LaGranja.dll
+D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\bin\Debug\netcoreapp2.0\LaGranja.pdb
+D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.csprojResolveAssemblyReference.cache
+D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.csproj.CoreCompileInputs.cache
+D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.AssemblyInfoInputs.cache
+D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.AssemblyInfo.cs
+D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.dll
+D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.pdb
