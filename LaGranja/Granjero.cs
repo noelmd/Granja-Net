@@ -41,6 +41,8 @@ namespace LaGranja
 
         //Eventos
 
+
+
         public void ComprarAnimales()
         {
             // Palomos
