@@ -17,6 +17,7 @@ namespace LaGranja
         private const int DIAS = 3;
 
         private const int PEREZA_MORTAL = 90;
+        private const int HAMBRE_MORTAL = 50;
 
         private enum ACCIONES { COMER, DORMIR };
 
@@ -103,7 +104,25 @@ namespace LaGranja
                         Console.WriteLine("Hay un ponedero de {0} que está lleno y se ha roto un huevo", granja.PonederosGallinas[0].GetTipoPonedero());
                     }
 
-                if (granjero.Pereza < PEREZA_MORTAL)
+                if (granjero.Hambre > HAMBRE_MORTAL)
+                {
+
+                    foreach ( Animal a in this.granja.Animales)
+                    {
+                        if (a is Conejo)
+                        {
+                            this.granja.Animales.Remove(a);
+
+                            break;
+
+                            
+                        }
+                    }
+
+                    Console.WriteLine("El granjero tiene hambre y ha sacrificado a un conejo");
+                }
+
+                    if (granjero.Pereza < PEREZA_MORTAL)
                 {
                     int huevosGallinaUnaYema = 0;
                     int huevosGallinaDosYemas = 0;
