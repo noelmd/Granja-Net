@@ -664,27 +664,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lopez\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\MasterAAA\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\git-repos\\Granja\\LaGranja\\LaGranja.csproj",
+      "projectUniqueName": "C:\\Users\\MasterAAA\\Desktop\\granja\\Granja-Net\\LaGranja\\LaGranja.csproj",
       "projectName": "LaGranja",
-      "projectPath": "C:\\git-repos\\Granja\\LaGranja\\LaGranja.csproj",
-      "packagesPath": "C:\\Users\\lopez\\.nuget\\packages\\",
-      "outputPath": "C:\\git-repos\\Granja\\LaGranja\\obj\\",
+      "projectPath": "C:\\Users\\MasterAAA\\Desktop\\granja\\Granja-Net\\LaGranja\\LaGranja.csproj",
+      "packagesPath": "C:\\Users\\MasterAAA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MasterAAA\\Desktop\\granja\\Granja-Net\\LaGranja\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\MasterAAA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -709,7 +709,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0.0",
             "autoReferenced": true
           }
         },
