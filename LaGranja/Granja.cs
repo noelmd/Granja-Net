@@ -15,6 +15,9 @@ namespace LaGranja
         private static int PONEDEROS_GALLINAS_DEFAULT = 1;
         private static int PONEDEROS_PALOMOS_DEFAULT = 1;
 
+        public int HuevosPalomoParaVenta { get; set; }
+        public int HuevosGallinaParaVenta { get; set; }
+
         private List <Ponedero<Gallina>> ponederosGallinas = new List<Ponedero<Gallina>> (PONEDEROS_GALLINAS_DEFAULT);
         private List<Ponedero<Palomo>> ponederosPalomos = new List<Ponedero<Palomo>>(PONEDEROS_PALOMOS_DEFAULT);
 
@@ -32,20 +35,28 @@ namespace LaGranja
 
         public Granja(Ponedero<Gallina> ponederoGallinas, Ponedero<Palomo> ponederoPalomos)
         {
-            this.ponederosGallinas = new List<Ponedero<Gallina>>(1);
-            this.ponederosGallinas.Add(ponederoGallinas);
+            this.ponederosGallinas = new List<Ponedero<Gallina>>(1)
+            {
+                ponederoGallinas
+            };
 
-            this.ponederosPalomos = new List<Ponedero <Palomo>>(1);
-            this.ponederosPalomos.Add(ponederoPalomos);
+            this.ponederosPalomos = new List<Ponedero<Palomo>>(1)
+            {
+                ponederoPalomos
+            };
         }
 
         public Granja(Ponedero<Palomo> ponederoPalomos, Ponedero<Gallina> ponederoGallinas)
         {
-            this.ponederosGallinas = new List<Ponedero<Gallina>>(1);
-            this.ponederosGallinas.Add(ponederoGallinas);
+            this.ponederosGallinas = new List<Ponedero<Gallina>>(1)
+            {
+                ponederoGallinas
+            };
 
-            this.ponederosPalomos = new List<Ponedero<Palomo>>(1);
-            this.ponederosPalomos.Add(ponederoPalomos);
+            this.ponederosPalomos = new List<Ponedero<Palomo>>(1)
+            {
+                ponederoPalomos
+            };
         }
 
         /*Propiedades */
@@ -90,11 +101,11 @@ namespace LaGranja
 
         public void EventoDia()
         {
-            this.ponerHuevosPalomos();
-            this.ponerHuevosGallinas();
+            this.PonerHuevosPalomos();
+            this.PonerHuevosGallinas();
         }
 
-        private void ponerHuevosPalomos()
+        private void PonerHuevosPalomos()
         {
             foreach(Palomo p in this.PonederosPalomos[0].GetAnimalesAsignados())
             {
@@ -102,7 +113,7 @@ namespace LaGranja
             }
         }
 
-        private void ponerHuevosGallinas()
+        private void PonerHuevosGallinas()
         {
             foreach (Gallina g in this.PonederosGallinas[0].GetAnimalesAsignados())
             {

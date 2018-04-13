@@ -664,27 +664,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Noel\\.nuget\\packages\\": {},
+    "C:\\Users\\MasterAAA\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "D:\\Profesor Mamoghli\\AAA-VC\\NET\\LaGranja\\LaGranja\\LaGranja.csproj",
+      "projectUniqueName": "C:\\Users\\MasterAAA\\Desktop\\Granja-Net\\LaGranja\\LaGranja.csproj",
       "projectName": "LaGranja",
-      "projectPath": "D:\\Profesor Mamoghli\\AAA-VC\\NET\\LaGranja\\LaGranja\\LaGranja.csproj",
-      "packagesPath": "C:\\Users\\Noel\\.nuget\\packages\\",
-      "outputPath": "D:\\Profesor Mamoghli\\AAA-VC\\NET\\LaGranja\\LaGranja\\obj\\",
+      "projectPath": "C:\\Users\\MasterAAA\\Desktop\\Granja-Net\\LaGranja\\LaGranja.csproj",
+      "packagesPath": "C:\\Users\\MasterAAA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MasterAAA\\Desktop\\Granja-Net\\LaGranja\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Noel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\MasterAAA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
