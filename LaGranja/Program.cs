@@ -20,19 +20,15 @@ namespace LaGranja
 
         private Granja granja;
         private Granjero granjero;
+        private object estadohuevo;
 
         static void Main(string[] args)
         {
             Console.WriteLine("Executing Granja Soution -> Main Thread");
-
             Program p = new Program();
-
-            p.init();
-             
-            p.Activity();
-           
+            p.init();             
+            p.Activity();           
             Console.ReadKey(true);
-
             Console.WriteLine("Finishing Main Thread");
         }
 
@@ -40,9 +36,7 @@ namespace LaGranja
         {
             granja = new Granja();
             granjero = new Granjero("Anastasio", granja);
-
             granjero.Granja = granja;
-
             granjero.ComprarPonederos();
             granjero.ComprarAnimales();
         }
@@ -58,16 +52,13 @@ namespace LaGranja
             for (int i = 0; i < DIAS; i++)
             {
                 Console.WriteLine("Empezando Día {0}.....................", i + 1);
-
                 Console.WriteLine("El nivel de hambre de {0} es {1} y de Pereza {2}", granjero.Nombre, granjero.Hambre, granjero.Pereza);
 
                 this.ConsultarPonederos();
-
                 if (granjero.Pereza < PEREZA_MORTAL)
                 {
                     this.acciones(granja.PonederosPalomos[0].GetAnimalesAsignados(), ACCIONES.COMER);
                     Console.WriteLine("{0} ha dado de comer a sus palomos", granjero.Nombre);
-
                     this.acciones(granja.PonederosGallinas[0].GetAnimalesAsignados(), ACCIONES.COMER);
                     Console.WriteLine("{0} ha dado de comer a sus gallinas", granjero.Nombre);
                 }
@@ -101,9 +92,11 @@ namespace LaGranja
                     int huevosGallinaUnaYema = 0;
                     int huevosGallinaDosYemas = 0;
                     int huevosGallinaTresYemas = 0;
-
+                    int huevosBuenosGallina = 0;
+                    int huevosMalosGallina = 0;
+                    int huevosBuenosPalomo= 0;
+                    int huevosMalosPalomo = 0;
                     int huevosPalomo = granja.PonederosPalomos[0].RecogerHuevos().Count;
-
                     foreach (Huevo h in granja.PonederosGallinas[0].RecogerHuevos())
                     {
                         if (h.Yemas == 2)
@@ -113,24 +106,37 @@ namespace LaGranja
                         else
                             huevosGallinaUnaYema++;
                     }
+                    foreach (Huevo h in granja.PonederosGallinas[0].RecogerHuevos())
+                    {
+                        if (h.Estadohuevo == EstadoHuevo.MALO)
+                            huevosMalosGallina++;
+                        else
+                            huevosBuenosGallina++;
+                    }
+                    foreach (Huevo h in granja.PonederosPalomos[0].RecogerHuevos())
+                    {
+                        if (h.Estadohuevo == EstadoHuevo.MALO)
+                            huevosMalosPalomo++;
+                        else
+                            huevosBuenosPalomo++;
+                    }
 
-                    Console.WriteLine("{0} dispone hoy en su granja de {1} huevos de palomo!", granjero.Nombre, huevosPalomo);
-                    Console.WriteLine("{0} dispone hoy en su granja de {1} huevos de gallina, de los que {2} son de doble yema y {3} de triple yema", granjero.Nombre, huevosGallinaUnaYema + huevosGallinaDosYemas + huevosGallinaTresYemas, huevosGallinaDosYemas, huevosGallinaTresYemas);
+
+                    Console.WriteLine("{0} dispone hoy en su granja de {1} huevos de palomo!, de ellos son malos {2}", granjero.Nombre, huevosPalomo, huevosMalosPalomo);
+
+
+                    Console.WriteLine("{0} dispone hoy en su granja de {1} huevos de gallina, de los que {2} son de doble yema y {3} de triple yema, de ellos son malos {4}", granjero.Nombre, huevosGallinaUnaYema + huevosGallinaDosYemas + huevosGallinaTresYemas, huevosGallinaDosYemas, huevosGallinaTresYemas, huevosMalosGallina);
                 }
                 else
                 {
                     Console.WriteLine("La pereza hizo que {0} no recogiera hoy huevos", granjero.Nombre);
                 }
-
                 Console.WriteLine("Llega la Noche del día {0}.....................", i + 1);
-
                 this.acciones(granja.PonederosPalomos[0].GetAnimalesAsignados(), ACCIONES.DORMIR);
                 Console.WriteLine("Los palomos se acuestan...", granjero.Nombre);
                 this.acciones(granja.PonederosGallinas[0].GetAnimalesAsignados(), ACCIONES.DORMIR);
                 Console.WriteLine("Las gallinas se duermen...", granjero.Nombre);
-
                 granjero.Pereza += new Random().Next(10, 30);
-
                 this.ConsultarPonederos();
             }
         }

@@ -9,3 +9,14 @@ D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\obj\Debug\netcoreapp2.0\LaGran
 D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.AssemblyInfo.cs
 D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.dll
 D:\Profesor Mamoghli\AAA-VC\NET\LaGranja\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.pdb
+C:\Users\MasterAAA\Desktop\granja\Granja-Net\LaGranja\bin\Debug\netcoreapp2.0\LaGranja.deps.json
+C:\Users\MasterAAA\Desktop\granja\Granja-Net\LaGranja\bin\Debug\netcoreapp2.0\LaGranja.runtimeconfig.json
+C:\Users\MasterAAA\Desktop\granja\Granja-Net\LaGranja\bin\Debug\netcoreapp2.0\LaGranja.runtimeconfig.dev.json
+C:\Users\MasterAAA\Desktop\granja\Granja-Net\LaGranja\bin\Debug\netcoreapp2.0\LaGranja.dll
+C:\Users\MasterAAA\Desktop\granja\Granja-Net\LaGranja\bin\Debug\netcoreapp2.0\LaGranja.pdb
+C:\Users\MasterAAA\Desktop\granja\Granja-Net\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.csprojResolveAssemblyReference.cache
+C:\Users\MasterAAA\Desktop\granja\Granja-Net\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.csproj.CoreCompileInputs.cache
+C:\Users\MasterAAA\Desktop\granja\Granja-Net\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.AssemblyInfoInputs.cache
+C:\Users\MasterAAA\Desktop\granja\Granja-Net\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.AssemblyInfo.cs
+C:\Users\MasterAAA\Desktop\granja\Granja-Net\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.dll
+C:\Users\MasterAAA\Desktop\granja\Granja-Net\LaGranja\obj\Debug\netcoreapp2.0\LaGranja.pdb

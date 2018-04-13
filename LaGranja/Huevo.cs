@@ -4,7 +4,8 @@ using System.Text;
 
 namespace LaGranja
 {
-    public enum Cascara { BLANCA, MORENA};
+    public enum Cascara {BLANCA, MORENA};
+    public enum EstadoHuevo { BUENO, MALO };
 
     public class Huevo
     {
@@ -14,12 +15,25 @@ namespace LaGranja
 
         private int yemas = 1;
 
+        private EstadoHuevo estadohuevo = EstadoHuevo.BUENO;
+
         private Cascara cascara = Cascara.BLANCA;
 
         //Constructores
-        public Huevo() => this.yemas = Huevo.randomYemas();
+        public Huevo()
+        {
+            this.yemas = Huevo.randomYemas();
 
-        public Huevo(int yemas) => this.yemas = yemas;
+            this.randomEstadoHuevo();
+        }
+
+
+
+        public Huevo(int yemas)
+        {
+            this.yemas = yemas;
+            this.randomEstadoHuevo();
+        }
 
         public Huevo(Cascara cascara) : this() => this.cascara = cascara;
 
@@ -36,6 +50,8 @@ namespace LaGranja
             set => cascara = value;
         }
 
+        public EstadoHuevo Estadohuevo { get => estadohuevo; set => estadohuevo = value; }
+
         private static int randomYemas()
         {
             int randomNumero = new Random().Next(101);
@@ -49,6 +65,17 @@ namespace LaGranja
             else{
                 return Huevo.YEMA_UNICA;
             }
+        }
+
+        private void randomEstadoHuevo()
+        {
+            int randomNumero = new Random().Next(100);
+
+            if (randomNumero > 90)
+            {
+                this.Estadohuevo = EstadoHuevo.MALO;
+
+            }      
         }
     }
 }

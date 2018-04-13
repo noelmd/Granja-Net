@@ -664,7 +664,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Noel\\.nuget\\packages\\": {},
+    "C:\\Users\\MasterAAA\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -673,17 +673,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Profesor Mamoghli\\AAA-VC\\NET\\LaGranja\\LaGranja\\LaGranja.csproj",
+      "projectUniqueName": "C:\\Users\\MasterAAA\\Desktop\\granja\\Granja-Net\\LaGranja\\LaGranja.csproj",
       "projectName": "LaGranja",
-      "projectPath": "D:\\Profesor Mamoghli\\AAA-VC\\NET\\LaGranja\\LaGranja\\LaGranja.csproj",
-      "packagesPath": "C:\\Users\\Noel\\.nuget\\packages\\",
-      "outputPath": "D:\\Profesor Mamoghli\\AAA-VC\\NET\\LaGranja\\LaGranja\\obj\\",
+      "projectPath": "C:\\Users\\MasterAAA\\Desktop\\granja\\Granja-Net\\LaGranja\\LaGranja.csproj",
+      "packagesPath": "C:\\Users\\MasterAAA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MasterAAA\\Desktop\\granja\\Granja-Net\\LaGranja\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Noel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MasterAAA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -709,7 +709,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0.0",
             "autoReferenced": true
           }
         },

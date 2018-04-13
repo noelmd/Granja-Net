@@ -68,7 +68,6 @@ namespace LaGranja
         public List<Huevo> RecogerHuevos()
         {
             List<Huevo> huevosRecogidos = this.huevos.Take(this.huevos.Count).ToList();
-
             return huevosRecogidos;
         }
 
