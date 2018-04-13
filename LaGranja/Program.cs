@@ -11,6 +11,8 @@ namespace LaGranja
         private const int MAX_GALLINAS = 8;
         private const int CAPACIDAD_PONEDERO_PALOMOS = 20;
         private const int CAPACIDAD_PONEDERO_GALLINAS = 50;
+        private double ChickenEggValue;
+        private double PigeonEggValue;
 
         private const int DIAS = 3;
 
@@ -28,7 +30,7 @@ namespace LaGranja
 
             Program p = new Program();
 
-            p.init();
+            p.Init();
              
             p.Activity();
            
@@ -37,12 +39,17 @@ namespace LaGranja
             Console.WriteLine("Finishing Main Thread");
         }
 
-        public void init()
+        public void Init()
         {
-            granja = new Granja();
-            granjero = new Granjero("Anastasio", granja);
+            this.ChickenEggValue = new Random().NextDouble() * (1000 - 0.01) + 0.01;
+            this.PigeonEggValue = new Random().NextDouble() * (1000 - 0.01) + 0.01;
 
-            granjero.Granja = granja;
+
+            granja = new Granja();
+            granjero = new Granjero("Anastasio", granja)
+            {
+                Granja = granja
+            };
 
             granjero.ComprarPonederos();
             granjero.ComprarAnimales();
@@ -66,10 +73,10 @@ namespace LaGranja
 
                 if (granjero.Pereza < PEREZA_MORTAL)
                 {
-                    this.acciones(granja.PonederosPalomos[0].GetAnimalesAsignados(), ACCIONES.COMER);
+                    this.Acciones(granja.PonederosPalomos[0].GetAnimalesAsignados(), ACCIONES.COMER);
                     Console.WriteLine("{0} ha dado de comer a sus palomos", granjero.Nombre);
 
-                    this.acciones(granja.PonederosGallinas[0].GetAnimalesAsignados(), ACCIONES.COMER);
+                    this.Acciones(granja.PonederosGallinas[0].GetAnimalesAsignados(), ACCIONES.COMER);
                     Console.WriteLine("{0} ha dado de comer a sus gallinas", granjero.Nombre);
                 }
                 else
@@ -122,6 +129,7 @@ namespace LaGranja
                     int huevosGallinaTresYemas = 0;
 
                     int huevosPalomo = granja.PonederosPalomos[0].RecogerHuevos().Count;
+                    this.granja.HuevosPalomoParaVenta = huevosPalomo;
 
                     foreach (Huevo h in granja.PonederosGallinas[0].RecogerHuevos())
                     {
@@ -132,6 +140,7 @@ namespace LaGranja
                         else
                             huevosGallinaUnaYema++;
                     }
+                    this.granja.HuevosGallinaParaVenta = huevosGallinaUnaYema + huevosGallinaDosYemas + huevosGallinaTresYemas;
 
                     Console.WriteLine("{0} dispone hoy en su granja de {1} huevos de palomo!", granjero.Nombre, huevosPalomo);
                     Console.WriteLine("{0} dispone hoy en su granja de {1} huevos de gallina, de los que {2} son de doble yema y {3} de triple yema", granjero.Nombre, huevosGallinaUnaYema + huevosGallinaDosYemas + huevosGallinaTresYemas, huevosGallinaDosYemas, huevosGallinaTresYemas);
@@ -143,9 +152,11 @@ namespace LaGranja
 
                 Console.WriteLine("Llega la Noche del día {0}.....................", i + 1);
 
-                this.acciones(granja.PonederosPalomos[0].GetAnimalesAsignados(), ACCIONES.DORMIR);
+                granjero.SellEggs(this.ChickenEggValue, this.PigeonEggValue);
+
+                this.Acciones(granja.PonederosPalomos[0].GetAnimalesAsignados(), ACCIONES.DORMIR);
                 Console.WriteLine("Los palomos se acuestan...", granjero.Nombre);
-                this.acciones(granja.PonederosGallinas[0].GetAnimalesAsignados(), ACCIONES.DORMIR);
+                this.Acciones(granja.PonederosGallinas[0].GetAnimalesAsignados(), ACCIONES.DORMIR);
                 Console.WriteLine("Las gallinas se duermen...", granjero.Nombre);
 
                 granjero.Pereza += new Random().Next(10, 30);
@@ -154,7 +165,7 @@ namespace LaGranja
             }
         }
 
-        private void acciones<T>(List<T> t, ACCIONES accion) where T : Animal
+        private void Acciones<T>(List<T> t, ACCIONES accion) where T : Animal
         {
             foreach (T animal in t)
             {

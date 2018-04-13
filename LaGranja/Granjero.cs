@@ -129,5 +129,15 @@ namespace LaGranja
                 this.Hambre += new Random().Next(1, 20);
             }
         }
+
+        public void SellEggs(double chickenEggsPrice, double pigeonEggsPrice) {
+            var dineroGanadoHuevosGallinas = this.Granja.HuevosGallinaParaVenta * chickenEggsPrice;
+            var dineroGanadoHuevosPalomos = this.Granja.HuevosPalomoParaVenta * pigeonEggsPrice;
+
+            Console.WriteLine("huevos de palomo: " + this.Granja.HuevosGallinaParaVenta + " precio a la venta: " + chickenEggsPrice + " || Total: " + dineroGanadoHuevosGallinas);
+            Console.WriteLine("huevos de palomo: " + this.Granja.HuevosPalomoParaVenta + " precio a la venta: " + pigeonEggsPrice + " || Total: " + dineroGanadoHuevosPalomos);
+            Console.WriteLine("Dinero ganado con los huevos en total = {0}", (dineroGanadoHuevosGallinas + dineroGanadoHuevosPalomos));
+        }
+
     }
 }
